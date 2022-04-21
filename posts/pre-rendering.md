@@ -1,11 +1,12 @@
 ---
-title: 'Two Forms of Pre-rendering'
-date: '2020-01-01'
+title: 'Why you should use TypeScript'
+date: '2022-04-25'
 ---
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+**TypeScript** is a superset of JavaScript. It is a _static_ type system. It means that you can't do things like:
 
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
+```
+const x = 'Hello';
+x.toUpperCase();
+```
 
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.

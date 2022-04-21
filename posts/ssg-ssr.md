@@ -1,19 +1,18 @@
 ---
-title: 'When to Use Static Generation v.s. Server-side Rendering'
-date: '2020-01-02'
+title: 'TailwindCSS: My new found love for CSS'
+date: '2022-04-26'
 ---
 
-We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
+I highly recommend using **TailwindCSS**. 
 
-You can use Static Generation for many types of pages, including:
+TailwindCSS is a CSS framework that is used to style elements in your app. It is a _pre-built_ library that comes with a bunch of classes that you can use in your CSS.
 
-- Marketing pages
-- Blog posts
-- E-commerce product listings
-- Help and documentation
+If you want to resuse styles (i.e. a wrapper to constrain large content), you can use **@apply** in your globals.css file.
 
-You should ask yourself: "Can I pre-render this page **ahead** of a user's request?" If the answer is yes, then you should choose Static Generation.
+@layer components {
+    .wrapper {
+        @apply mx-auto w-11/12 max-w-screen-xl p-8;
+    }
+}
 
-On the other hand, Static Generation is **not** a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.
-
-In that case, you can use **Server-Side Rendering**. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.
+This is the same as writing out: margin: 0 auto, width: 91.666667:, max-width: 1280px. A wrapper is generally between 1000px - 1300px.
